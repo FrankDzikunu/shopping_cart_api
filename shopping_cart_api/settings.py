@@ -30,7 +30,12 @@ SECRET_KEY = 'django-insecure-^)o+b3o%xcaotrve*g&!m)nh@z3)g5r#^t%606=1kcch2@3-z1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split(",")
+ALLOWED_HOSTS = [
+    "127.0.0.1",  # Localhost for development
+    "localhost",
+    "shopping-cart-api-won0.onrender.com"  # Render app domain
+]
+
 
 
 # Application definition
