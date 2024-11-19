@@ -357,7 +357,7 @@ The project is deployed using [Render](https://render.com). Follow the steps bel
 
 ## Deploy link
 
-`https://shopping-cart-api-won0.onrender.com`
+[Link to the hosted application](https://shopping-cart-api-won0.onrender.com)
 
 ---
 
