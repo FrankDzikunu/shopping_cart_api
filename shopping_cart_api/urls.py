@@ -13,7 +13,7 @@ schema_view = get_schema_view(
         title="Shopping Cart API",
         default_version="v1",
         description="API for managing products and shopping cart.",
-        contact=openapi.Contact(email="support@example.com"),
+        contact=openapi.Contact(email="fdzikunu@stu.ucc.edu.gh"),
         license=openapi.License(name="MIT License"),
     ),
     public=True,

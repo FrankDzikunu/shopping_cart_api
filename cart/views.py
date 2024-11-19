@@ -6,24 +6,15 @@ from .serializers import CartItemSerializer
 
 # List and Add Cart Items
 class CartListCreateView(generics.ListCreateAPIView):
-    """
-    Handles listing all cart items and adding new items to the cart.
-    """
     queryset = CartItem.objects.all()
     serializer_class = CartItemSerializer
 
     def get_permissions(self):
-        """
-        Restrict POST method to authenticated users; allow read-only access for others.
-        """
         if self.request.method == 'POST':
             return [permissions.IsAuthenticated()]
         return [permissions.AllowAny()]
 
     def create(self, request, *args, **kwargs):
-        """
-        Custom create method to handle adding products to the cart with stock validation.
-        """
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
