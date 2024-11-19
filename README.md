@@ -355,9 +355,9 @@ The project is deployed using [Render](https://render.com). Follow the steps bel
 ---
 
 
-## License
+## Deploy link
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+`https://shopping-cart-api-won0.onrender.com`
 
 ---
 
