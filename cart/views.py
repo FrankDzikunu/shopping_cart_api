@@ -53,22 +53,13 @@ class CartListCreateView(generics.ListCreateAPIView):
 
 # Update or Delete Cart Items
 class CartRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    """
-    Handles retrieving, updating, and deleting specific cart items.
-    """
     queryset = CartItem.objects.all()
     serializer_class = CartItemSerializer
 
     def get_permissions(self):
-        """
-        Restrict update and delete methods to authenticated users.
-        """
         return [permissions.IsAuthenticated()]
 
     def update(self, request, *args, **kwargs):
-        """
-        Custom update method to handle quantity validation.
-        """
         cart_item = self.get_object()
         new_quantity = request.data.get('quantity', cart_item.quantity)
 

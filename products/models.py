@@ -9,8 +9,8 @@ class Product(models.Model):
     image_mobile = models.URLField(verbose_name="Mobile Image URL")
     image_tablet = models.URLField(verbose_name="Tablet Image URL")
     image_desktop = models.URLField(verbose_name="Desktop Image URL")
-    stock = models.PositiveIntegerField(default=0)  # New field to track stock availability
-    description = models.TextField(blank=True, null=True)  # Optional product description
+    stock = models.PositiveIntegerField(default=0) 
+    description = models.TextField(blank=True, null=True)  
 
     class Meta:
         verbose_name = "Product"
@@ -21,5 +21,4 @@ class Product(models.Model):
         return self.name
 
     def is_in_stock(self):
-        """Check if the product is in stock."""
-        return self.stock > 0
+                return self.stock > 0

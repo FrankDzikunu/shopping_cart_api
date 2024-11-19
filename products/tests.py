@@ -58,11 +58,11 @@ class ProductAPITests(APITestCase):
         }
         response = self.client.put(f'/api/products/{self.product.id}/', data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data['name'], data['name'])  # Ensure the product name was updated
+        self.assertEqual(response.data['name'], data['name'])  
 
     def test_delete_product(self):
         """
         Test DELETE request for deleting a product.
         """
         response = self.client.delete(f'/api/products/{self.product.id}/')
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)  # Product should be deleted
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)  
